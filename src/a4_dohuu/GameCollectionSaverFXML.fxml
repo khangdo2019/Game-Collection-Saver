@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<GridPane id="GridPane" prefHeight="400.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a4_dohuu.GameCollectionSaverFXMLController">
+    <stylesheets>
+        <URL value="@gamecollectionsaverfxml.css"/>
+    </stylesheets>    
+    <children>
+        <VBox minWidth="150" styleClass="vbox" GridPane.columnIndex="0" GridPane.halignment="CENTER">
+            <GridPane.margin>
+                <Insets right="15.0" left="5.0" top="30.0" bottom="30.0" />
+            </GridPane.margin>
+            <Label styleClass="label" minHeight="70" text="Available Files" wrapText="true" GridPane.rowIndex="0" GridPane.columnIndex="0" maxWidth="Infinity"/>
+            <ListView styleClass="list-view" maxHeight="200" fx:id="lstGameCollection" GridPane.rowIndex="1" prefWidth="200"/>
+            
+        </VBox>        
+        <Button styleClass="button" fx:id="btnLoadItem" text="LOAD" GridPane.columnIndex="0" GridPane.rowIndex="3" maxWidth="Infinity">
+            <GridPane.margin>
+                <Insets right="15.0" left="5.0" top="0.0" bottom="30.0" />
+            </GridPane.margin>
+        </Button>
+        <VBox minWidth="150" styleClass="vbox" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <GridPane.margin>
+                <Insets right="15.0" left="15.0" top="30.0" bottom="30.0" />
+            </GridPane.margin>
+            <Label styleClass="label" minHeight="70" text="Number of Players" wrapText="true" GridPane.rowIndex="0" maxWidth="Infinity"/>
+            <ListView styleClass="list-view" maxHeight="200" fx:id="lstNumberPlayer" GridPane.rowIndex="1" prefWidth="100"/>
+        </VBox>
+        <VBox minWidth="150"  GridPane.columnIndex="2" GridPane.halignment="CENTER">
+            <GridPane.margin>
+                <Insets right="15.0" left="15.0" top="30.0" bottom="30.0" />
+            </GridPane.margin>
+            <Label styleClass="label" minHeight="70" text="Select Game (DDL)" wrapText="true" GridPane.rowIndex="0" maxWidth="Infinity"/>
+            <ComboBox id="combo-box" fx:id="ddlGameName" editable="false" visibleRowCount="5" GridPane.rowIndex="1" minWidth="100" maxWidth="200"/>
+        </VBox>
+        <VBox minWidth="150" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+            <GridPane.margin>
+                <Insets right="5.0" left="15.0" top="30.0" bottom="30.0" />
+            </GridPane.margin>
+            <Label styleClass="label" minHeight="70" text="About your selected game" GridPane.rowIndex="0" maxWidth="Infinity"/>
+            <TextArea id="text-area" fx:id="txtGameRecord" maxHeight="200" editable="false" wrapText="true" GridPane.rowIndex="1" />
+            
+        </VBox>
+        <Button styleClass="button" fx:id="btnSave" text="SAVE" GridPane.rowIndex="3" GridPane.columnIndex="3" maxWidth="Infinity">
+            <GridPane.margin>
+                <Insets right="5.0" left="15.0" top="0.0" bottom="30.0" />
+            </GridPane.margin>
+        </Button>        
+    </children>
+</GridPane>
